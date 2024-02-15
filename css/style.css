@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 * {
     padding: 0;
@@ -7,9 +8,17 @@
     box-sizing: border-box;
 }
 
+html {
+    width: 100vw;
+    height: 100vh;
+    font-size: 62.5%;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
 :root{
     --font-titulos: 'Poppins', sans-serif;
-    --font-topicos:
+    --font-topicos: "Bebas Neue", sans-serif;
 }
 
 body {
@@ -30,7 +39,7 @@ header img {
 
 .inicio {
     height: 450px;
-    padding: 24px;
+    padding: 70px;
 
     background-image: linear-gradient(rgba(29, 29, 29, 0.8), rgba(29, 29, 29, 0.8)), url(../images/newbackground.jpg);
     background-size: cover;
@@ -66,19 +75,44 @@ header img {
     background-color: #e4e4e4;
 }
 
+/* produtos para parede */
+
 .produtos {
-    height: 600px;
-    background-color: #f1f1f1;
-    padding: 20px;
+    width: 100vw;
     display: flex;
-    
-    align-items:flex-start;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    
+    background-color: #f8f8f8;
+    text-transform: uppercase;
 }
 
-.produtos h3 {
-    font-family: var(--font-titulos);
-    font-weight: 700;
-    font-size: 25px;
+/* titulo "para fixar na parede" */
+.produtos .intro {
+    text-align: center;
+    font-family: var(--font-topicos);
+    font-weight: 400;
+    font-size: 30px;
+    padding: 15px;
+}
+
+.produtos-one {
+    width: 80%;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    display: grid;
+    flex-direction: column;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+}
+
+@media (max-width: 768px) {
+    .produtos-one {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.produtos .produtos-one img {
+    width: 300px;
 }
