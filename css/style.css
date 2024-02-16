@@ -31,6 +31,10 @@ header {
     align-items: center;
     justify-content: space-around;
     height: 63px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
 }
 
 header img {
@@ -38,18 +42,19 @@ header img {
 }
 
 .inicio {
-    width: 100%;
-    height: 300%;
-    padding: 70px;
+    width: 100;
+    height: 400px;
+    padding: 30px;
 
     background-image: linear-gradient(rgba(29, 29, 29, 0.8), rgba(29, 29, 29, 0.8)), url(../images/newbackground.jpg);
     background-size: cover;
     background-position: center 70%;
-
+    margin-top: 63px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .inicio h1 {
@@ -67,12 +72,12 @@ header img {
     font-family: var(--font-titulos);
     font-weight: 400;
     font-size: 20px;
-    margin: 5px 5px 5px 5px;
+    margin: 5px 5px 0px 5px;
     text-align: center;
 }
 
 .quebra {
-    height: 70px;
+    height: 100px;
     background-color: #e4e4e4;
 }
 
@@ -94,13 +99,13 @@ header img {
     font-family: var(--font-topicos);
     font-weight: 400;
     font-size: 30px;
-    padding: 15px;
+    padding: 25px;
 }
 
 .produtos-one {
-    width: 80%;
+    width: 75%;
     margin-top: 5px;
-    margin-bottom: 30px;
+    margin-bottom: 100px;
     display: grid;
     flex-direction: column;
     grid-template-columns: repeat(4, 1fr);
@@ -116,6 +121,7 @@ header img {
 
 .produtos .produtos-one img {
     width: 100%;
+    border-radius: 8px;
 }
 
 .produtos-one .info {
@@ -127,4 +133,84 @@ header img {
     align-items: center;
     justify-content: center;
     padding: 15px;
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+
+.produtos-one .info h2 {
+    font-family: var(--font-titulos);
+    font-weight: 600;
+    font-size: 20px;
+    margin: 5px 5px 0px 5px;
+    color: #3d3d3d;
+}
+
+.produtos-one .info h3 {
+    font-family: var(--font-titulos);
+    font-weight: 600;
+    font-size: 15px;
+    margin: 0px 5px 5px 5px;
+    padding-top: 0px;
+}
+
+/* creditos do botão usado: https://getcssscan.com/css-buttons-examples */
+.produtos-one .info .botao {
+    appearance: none;
+    /* cor de fundo */
+    background-color: black;
+    /* borda */
+    border: 2px solid #1A1A1A;
+    border: 2px solid #1A1A1A;
+
+    border-radius: 8px;
+    box-sizing: border-box;
+    /* cor do texto */
+    color: #f8f8f8;
+
+    cursor: pointer;
+    display: inline-block;
+    font-family: var(--font-titulos);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: normal;
+    margin: 0;
+    min-height: 10px;
+    min-width: 0;
+    outline: none;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 40%;
+    will-change: transform;
+    text-transform: uppercase;
+}
+
+.produtos-one .info .botao:disabled {
+    pointer-events: none;
+}
+
+.produtos-one .info .botao:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+    transition: 600ms;
+
+    background-color: #e4e4e4;
+    border: 2px solid #1A1A1A;
+    color: #3B3B3B;
+
+}
+
+.produtos-one .info .botao:active{
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+.produtos-one div {
+    background-color: #e4e4e4;
+    border-radius: 8px;
+    box-shadow: -8px 8px 35px #d3d3d3, 8px -8px 35px #ededed;
 }
