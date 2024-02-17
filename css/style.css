@@ -232,7 +232,13 @@ footer h6 {
     margin: 0px;
 }
 
+footer ul {
+    display: flex;
+    align-content: center;
+}
+
 footer a {
     color: white;
-    font-size: 40px;
+    font-size: 35px;
+    margin: 8px;
 }
