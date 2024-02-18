@@ -14,6 +14,7 @@ html {
     font-size: 62.5%;
     overflow-x: hidden;
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
 :root{
@@ -30,11 +31,40 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 63px;
+    height: 65px;
     width: 100%;
     position: fixed;
     top: 0;
     z-index: 1000;
+}
+
+header ul {
+    text-decoration: none;
+    list-style-type: none;
+    display: flex;
+    margin-top: 20px;
+}
+
+header a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: var(--font-topicos);
+    font-size: 15px;
+    font-weight: 500;
+    color: #e4e4e4;
+    margin: 13px;
+}
+
+header a::after {
+    content: '';
+    width: 0;
+    background-color: #e4e4e4;
+    display: block;
+    height: 2px;
+    transition: width 0.3s ease;
+}
+header a:hover::after {
+    width: 100%;
 }
 
 header img {
@@ -49,7 +79,7 @@ header img {
     background-image: linear-gradient(rgba(29, 29, 29, 0.8), rgba(29, 29, 29, 0.8)), url(../images/newbackground.jpg);
     background-size: cover;
     background-position: center 70%;
-    margin-top: 63px;
+    margin-top: 65px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -216,6 +246,7 @@ header img {
     justify-content: center;
     justify-items: center;
     text-align: center;
+    padding: 5px;
 }
 
 .quebra img {
