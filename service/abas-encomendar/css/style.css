@@ -99,9 +99,8 @@ header img {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     justify-content: center;
-
 }
 .img-container img{
     width: 400px;
@@ -138,7 +137,7 @@ header img {
 }
 .nome-produto{
     font-size: 26px;
-    margin: 5px;
+    margin: 5px 0;
     font-weight: 700;
     letter-spacing: 1px;
     opacity: 0.9;
@@ -147,6 +146,7 @@ header img {
 .preco-produto{
     font-weight: 700;
     font-size: 24px;
+    margin: 5px 0;
     opacity: 0.9;
     font-weight: 600;
 }
@@ -158,13 +158,13 @@ header img {
     line-height: 1.6;
     font-weight: 300;
     opacity: 0.9;
-    text-align: center;
-    margin-left: 10px;
+    text-align: left;
     margin-right: 10px;
 }
 
 .botao-encomendar a {
     text-decoration: none;
+    padding: 10px 0;
 }
 .botao-encomendar{
     margin-top: 22px;
@@ -190,13 +190,13 @@ header img {
     align-self: center;
 }
 
-.buy-now-btn{
+.bt{
     width: 300px;
     background-color: #000;
     border: 2px solid #000;
     border-radius: 8px;
 }
-.buy-now-btn:hover{
+.bt:hover{
     background-color: #f8f8f8;
     color: #000;
 }
@@ -222,6 +222,7 @@ header img {
         max-width: 400px;
         margin-right: auto;
         margin-left: auto;
+        text-align: center;
     }
 }
 
